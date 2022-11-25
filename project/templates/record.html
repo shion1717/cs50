@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Record transaction
+{% endblock %}
+
+{% block main %}
+    <form action="/record" method="post">
+        <div class="form-group">
+            <br>
+            You are entering a transaction for profile: <b> {{ profilename }} </b>
+            <br><br>
+
+            Date of transaction: <input class="form-control" name="txndate" type="date" value = {{today}}>
+            <br><br>
+            Category: <select class="form-control" name="category">
+                            <option disabled selected value> Choose a category</option>
+                            {% for category in categories %}
+                            <option value="{{category.categories}}">{{category.categories}}</option>
+                            {% endfor %}
+                      </select>
+            <br><br>
+            Amount: <input type="number" name="amount">
+            <br><br>
+            Short description: <input class="form-control" type="text" size="100" name="shortdesc">
+            <input type="hidden" name="tableid" value={{ tableid }}>
+        <button class="btn btn-primary" type="submit">Record transaction</button>
+        </div>
+    </form>
+{% endblock %}

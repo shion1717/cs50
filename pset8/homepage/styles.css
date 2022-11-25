@@ -1,0 +1,59 @@
+body {
+    background-color: #fff;
+    color: grey;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    text-align: left;
+    color: black;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
+.para {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+
+p::before{
+    content: "\00000a";
+}
+
+.climate {
+    display: none;
+}
+
+.population {
+    display: none;
+    text-align: left;
+}

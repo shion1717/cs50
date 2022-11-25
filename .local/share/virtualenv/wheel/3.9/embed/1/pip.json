@@ -1,0 +1,72 @@
+{
+  "completed": "2022-11-25T02:16:13.791122Z",
+  "periodic": true,
+  "started": "2022-11-25T02:15:42.565179Z",
+  "versions": [
+    {
+      "filename": "pip-22.3.1-py3-none-any.whl",
+      "found_date": "2022-11-25T02:15:43.391320Z",
+      "release_date": "2022-11-05T15:56:17.000000Z"
+    },
+    {
+      "filename": "pip-22.3-py3-none-any.whl",
+      "found_date": "2022-11-25T02:16:01.686542Z",
+      "release_date": "2022-10-15T11:41:14.000000Z"
+    },
+    {
+      "filename": "pip-22.0.3-py3-none-any.whl",
+      "found_date": "2022-02-14T13:10:13.581069Z",
+      "release_date": "2022-02-03T08:44:11.000000Z"
+    },
+    {
+      "filename": "pip-22.0.2-py3-none-any.whl",
+      "found_date": "2022-02-14T13:10:29.658513Z",
+      "release_date": "2022-01-30T22:46:51.000000Z"
+    },
+    {
+      "filename": "pip-22.0.1-py3-none-any.whl",
+      "found_date": "2022-02-14T13:10:39.673680Z",
+      "release_date": "2022-01-30T19:43:48.000000Z"
+    },
+    {
+      "filename": "pip-22.0-py3-none-any.whl",
+      "found_date": "2022-02-14T13:10:49.556647Z",
+      "release_date": "2022-01-30T12:34:58.000000Z"
+    },
+    {
+      "filename": "pip-21.3.1-py3-none-any.whl",
+      "found_date": "2022-02-14T13:11:00.864660Z",
+      "release_date": "2021-10-22T15:57:09.000000Z"
+    },
+    {
+      "filename": "pip-21.1.1-py3-none-any.whl",
+      "found_date": "2021-05-03T07:09:15.813325Z",
+      "release_date": "2021-04-30T19:05:20.000000Z"
+    },
+    {
+      "filename": "pip-21.1-py3-none-any.whl",
+      "found_date": "2021-05-03T07:09:28.908361Z",
+      "release_date": "2021-04-24T12:58:11.000000Z"
+    },
+    {
+      "filename": "pip-21.0.1-py3-none-any.whl",
+      "found_date": "2021-02-16T00:40:22.881445Z",
+      "release_date": "2021-01-30T12:54:11.000000Z"
+    },
+    {
+      "filename": "pip-21.0-py3-none-any.whl",
+      "found_date": "2021-02-16T00:40:33.877199Z",
+      "release_date": "2021-01-23T14:45:47.000000Z"
+    },
+    {
+      "filename": "pip-20.3.4-py2.py3-none-any.whl",
+      "found_date": "2021-02-16T00:40:42.294055Z",
+      "release_date": "2021-01-23T12:58:09.000000Z"
+    },
+    {
+      "filename": "pip-20.3.3-py2.py3-none-any.whl",
+      "found_date": "2021-02-16T00:40:50.485277Z",
+      "release_date": "2020-12-15T15:44:25.000000Z"
+    }
+  ]
+}

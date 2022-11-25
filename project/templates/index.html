@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+{% if not profiles[0] %}
+
+It looks like you have not created a profile to capture your expenses yet. You can do so by clicking "Create" at the top, or by clicking this button:
+<br>
+<form action="/create" method="get">
+    <button class="btn btn-primary" type="submit">Create profile</button>
+</form>
+
+{% else %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Profile name</th>
+                <th>Type</th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for profile in profiles %}
+            <tr>
+                <td>{{ profile.tablename }}</td>
+                <td>{{ profile.type }}</td>
+                <td>
+                    <form action="/record" method="get">
+                    <input type="hidden" name="tableid" value={{ profile.tableid }}>
+                    <input type="hidden" name="profile" value={{ profile.tablename }}>
+                    <button class="btn btn-primary" type="submit">Record txn</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/history" method="get">
+                    <input type="hidden" name="tableid" value={{ profile.tableid }}>
+                    <input type="hidden" name="profile" value={{ profile.tablename }}>
+                    <button class="btn btn-primary" type="submit">View txns</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/delete" method="get">
+                    <input type="hidden" name="tableid" value={{ profile.tableid }}>
+                    <input type="hidden" name="profile" value={{ profile.tablename }}>
+                        <button class="btn btn-danger" type="submit">Delete profile</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endif %}
+{% endblock %}

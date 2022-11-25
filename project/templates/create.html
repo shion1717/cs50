@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/create" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="profilename" placeholder="Name your profile here!" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Create a profile</button>
+    </form>
+{% endblock %}

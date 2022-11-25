@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit transaction
+{% endblock %}
+
+{% block main %}
+    <form action="/edit" method="post">
+        <div class="form-group">
+            <br>
+            You are editing a transaction.
+            <br><br>
+
+            Date of transaction: <input class="form-control" name="txndate" type="date" value ={{txndata.date_time}}>
+            <br><br>
+            Category: <select class="form-control" name="category">
+                            <option value = {{txndata.category}}> {{txndata.category}} </option>
+                            {% for category in categories %}
+                            <option value="{{category.categories}}">{{category.categories}}</option>
+                            {% endfor %}
+                      </select>
+            <br><br>
+            Amount: <input type="number" name="amount" value = {{ txndata.amount }}>
+            <br><br>
+            Short description: <input class="form-control" type="text" size="100" name="shortdesc" value={{ txndata.description }}>
+            <input type="hidden" name="tableid" value={{ txndata.tableid }}>
+            <input type="hidden" name="txnid" value={{ txndata.id }}>
+        <button class="btn btn-primary" type="submit">Record transaction</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+		// Choose right vs wrong answer for q1
+	function wronganswer()
+            {
+		let q1wrong = document.querySelector('q1wrong')
+                q1wrong.style.visibility = "visible";
+
+		let q1right = document.querySelector('q1right')
+                q1right.style.visibility = "hidden";
+            }
+	function rightanswer()
+            {
+		let q1right = document.querySelector('q1right')
+                q1right.style.visibility = "visible";
+
+		let q1wrong = document.querySelector('q1wrong')
+                q1wrong.style.visibility = "hidden";
+            }
+	function wronganswer2()
+            {
+		let q2wrong = document.querySelector('q2wrong')
+                q2wrong.style.visibility = "visible";
+
+		let q2right = document.querySelector('q2right')
+                q2right.style.visibility = "hidden";
+            }
+	function rightanswer2()
+            {
+		let q2right = document.querySelector('q2right')
+                q2right.style.visibility = "visible";
+
+		let q2wrong = document.querySelector('q2wrong')
+                q2wrong.style.visibility = "hidden";
+            }
+
+	document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = function() {
+
+		    if (document.querySelector('#name').value == 'girl')
+		    {
+		    rightanswer2();
+		    }
+		    else
+		    {
+		    wronganswer2();
+		    }
+		    return false;
+
+                };
+            });
+
+
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+		<h3> How many casinos are there in Singapore? </h3>
+		<q1right>Correct!</q1right>
+		<br>
+		<q1wrong>Incorrect.</q1wrong>
+		<br>
+		<input type="button" value="One" onclick="wronganswer()">
+		<input type="button" value="Two" onclick="rightanswer()">
+		<input type="button" value="Three" onclick="wronganswer()">
+		<input type="button" value="Four" onclick="wronganswer()">
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+		<h3> What is the opposite of "boy"? </h3>
+		<q2right>Correct!</q2right>
+		<br>
+		<q2wrong>Incorrect.</q2wrong>
+		<br>
+		<form>
+	            <input autocomplete="off" id = "name" placeholder="Insert answer here" type="text">
+		    <input type="submit">
+        	</form>
+
+            </div>
+
+        </div>
+    </body>
+</html>
